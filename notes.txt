@@ -1,0 +1,65 @@
+1. Problem
+
+Create a sketch board where a user can draw on it using cursor. When user hovers over a cell, it should change the colour.
+
+A user should have an option to change the grid size
+A user should have an option to clear the grid
+A user should have an option to change the colour in which he/she is drawing on that board. 
+
+Pseudo Code:
+
+gridCells = 20
+cellColour = #fff;
+
+FUNCTION createGrid
+	IF gridCells > 100
+		throw ERROR
+	ELSE
+	grab element in which you want to put your cells into
+	cellWidthandHeight = 1000 / cells
+	
+	LOOP gridCell times to create gridCells amount of cells
+		create new DIV element
+		add "grid-cell" class to DIV element
+		add width to that grid element
+		add height to that grid element
+		add backgroundColor to that grid element
+		append DIV element to parent element
+		
+		
+Invoke createGrid function
+
+add HOVER OVER EVENT LISTENER to all gridCells and when event occurs, it should use callback function
+
+CALLBACK FUNTION
+	grab element
+	change elements colour (use cellColour)
+
+add CLICK EVENT LISTENER to "Clear" button and when event occurs, use the following callback function
+
+CALLBACK FUNTION
+	grab all cells
+	iterate through all of them
+	change styling to default (white background)
+
+
+add CLICK EVENT LISTENER to "Change size" button and when event occurs, use the following callback function
+
+CALLBACK FUNCTION
+	take value from input
+	add this value to gridCells variable
+	grab all cells
+	iterate through all of them and change styling to default (white background)
+	Invoke createGrid function
+
+
+add INPUT EVENT LISTENER to "Colour picker" and when event occurs, use the following callback function
+
+CALLBACK FUNTION
+	colour = e.target.value
+	push this new colour to cellColour
+	
+
+
+	
+	
